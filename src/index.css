@@ -1,0 +1,181 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.box{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ .main h1{
+font-size: 4rem;
+text-align: center;
+word-wrap: break-word;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 8rem 0px;
+}
+
+.form input{
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  border-bottom: 2px solid black;
+  padding: 8px;
+  min-width: 400px;
+  width: 50%;
+  letter-spacing: 1.3px;
+  text-transform: capitalize;
+}
+
+.form input::placeholder{
+  text-transform: lowercase;
+}
+
+.form a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-size: 3rem;
+  margin: 0px 24px;
+  transition: all ease-in-out 0.1s;
+}
+
+.form a:hover{
+  font-size: 3.2rem;
+}
+
+.error{
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  width: 100%;
+  font-family: monospace;
+}
+
+.error h1{
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 50px;
+}
+
+.error a{
+  font-size: 1.5rem;
+}
+
+.loading{
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  font-family: monospace;
+  font-size: 4rem;
+  font-weight: 400;
+  animation: hide 1s linear 0s infinite alternate;
+}
+
+@keyframes hide {
+  0% {opacity: 0;}
+  50%{opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.container2{
+  width: 90%;
+  margin: 32px 0px;
+}
+
+.forecast{
+  width: 90%;
+}
+
+.temperature{
+  font-size: 4rem;
+  display: inline;
+}
+
+.temperature::after{
+  content: "°C";
+  position: absolute;
+  font-size: 1rem;
+  top: 70px;
+}
+
+.text{
+  display: inline;
+  margin: 0px 18px;
+  font-size: 1.5rem;
+}
+
+.place{
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.location{
+  text-transform: capitalize;
+}
+
+.location span{
+  text-decoration: underline;
+}
+
+.container h1{
+  font-weight: 400;
+}
+
+table{
+  text-align: center;
+}
+
+.heading{
+  font-weight: 700;
+}
+
+.back{
+  position: relative;
+  left: 5%;
+}
+
+@media only screen and (max-width:550px) {
+  .box{
+    align-items: normal;
+  }
+  .main h1{
+    word-wrap: normal;
+  }
+  .form{
+    flex-direction: column;
+  }
+  .form input{
+    min-width: 330px;
+  }
+  .form a{
+    margin: 50px;
+  }
+}
